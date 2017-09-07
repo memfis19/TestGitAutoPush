@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/TestGitAutoPush.iml" filepath="$PROJECT_DIR$/TestGitAutoPush.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/app/TestGitAutoPush-app.iml" filepath="$PROJECT_DIR$/app/TestGitAutoPush-app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestGitAutoPushSubModule/TestGitAutoPushSubModule.iml" filepath="$PROJECT_DIR$/TestGitAutoPushSubModule/TestGitAutoPushSubModule.iml" />
+      <module fileurl="file://$PROJECT_DIR$/TestGitAutoPushSubModule/app/TestGitAutoPushSubModule-app.iml" filepath="$PROJECT_DIR$/TestGitAutoPushSubModule/app/TestGitAutoPushSubModule-app.iml" />
       <module fileurl="file://$PROJECT_DIR$/lib/lib.iml" filepath="$PROJECT_DIR$/lib/lib.iml" />
     </modules>
   </component>

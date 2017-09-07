@@ -18,6 +18,11 @@ allprojects {
     }
 }
 
+task initGit {
+    dependsOn ':app:buildAndPush'
+    dependsOn ':TestGitAutoPushSubModule:app:buildAndPush'
+}
+
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
