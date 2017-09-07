@@ -87,6 +87,8 @@ task pushToOrigin {
 }
 
 task buildAndPush {
+    outputs.println("Path to curr dir = ${file('.')}")
+
     dependsOn 'clean'
     dependsOn 'build'
     dependsOn 'tagRelease'
