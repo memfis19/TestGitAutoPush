@@ -37,7 +37,7 @@ dependencies {
     testCompile 'junit:junit:4.12'
 }
 
-version = "1.0.0-${grgit.head().abbreviatedId}.${getDate()}"
+version = "1.0.0-${grgit.head().abbreviatedId}.${getDate()}.${Math.random()}"
 
 task tagRelease {
     description = 'Tags the current head with the project\'s version.'
