@@ -17,11 +17,28 @@ allprojects {
     }
 }
 
+task pushToOrigin {
+    description = 'Pushes current branch\'s committed changes to origin repo.'
+    doLast {
+        def credentials = new org.ajoberstar.grgit.Credentials(username, password)
+        def grgit1 = grgit.open {
+            currentDir = ""
+            creds = credentials
+        }
+        grgit1.add(update: true, patterns: ['.'])
+        grgit1.commit(message: "changes")
+        grgit1.push()
+        grgit1.close()
+    }
+}
+
 task initGit {
+    dependsOn 'pushToOrigin'
     dependsOn ':app:buildAndPush'
     dependsOn ':TestGitAutoPushSubModule:app:buildAndPush'
 
     tasks.getByPath(":app:buildAndPush").mustRunAfter(":TestGitAutoPushSubModule:app:buildAndPush")
+    tasks.findByName('pushToOrigin').mustRunAfter(":app:buildAndPush")
 }
 
 task clean(type: Delete) {

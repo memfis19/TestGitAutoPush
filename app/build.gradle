@@ -79,7 +79,7 @@ task pushToOrigin {
                     currentDir = ""
                     creds = credentials
         }
-        grgit1.add(patterns: ['.'])
+        grgit1.add(update: true, patterns: ['.'])
         grgit1.commit(message: "changes")
         grgit1.push()
         grgit1.close()
