@@ -10,6 +10,8 @@ buildscript {
     }
 }
 
+apply plugin: 'org.ajoberstar.grgit'
+
 allprojects {
     repositories {
         jcenter()
