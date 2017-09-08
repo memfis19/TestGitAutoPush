@@ -1,5 +1,4 @@
 // Top-level build file where you can add configuration options common to all sub-projects/modules.
-
 buildscript {
     repositories {
         jcenter()
@@ -22,9 +21,7 @@ task initGit {
     dependsOn ':app:buildAndPush'
     dependsOn ':TestGitAutoPushSubModule:app:buildAndPush'
 
-    outputs.println(tasks)
-
-//    tasks.findByName(':app:buildAndPush').mustRunAfter ':TestGitAutoPushSubModule:app:buildAndPush'
+    tasks.getByPath(":app:buildAndPush").mustRunAfter(":TestGitAutoPushSubModule:app:buildAndPush")
 }
 
 task clean(type: Delete) {
