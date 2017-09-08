@@ -1,0 +1,3 @@
+[submodule "TestGitAutoPushSubModule"]
+	path = TestGitAutoPushSubModule
+	url = https://github.com/memfis19/TestGitAutoPushSubModule.git
